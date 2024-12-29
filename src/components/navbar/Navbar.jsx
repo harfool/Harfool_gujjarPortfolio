@@ -12,12 +12,16 @@ import Sidebar from '../sidebar/Sidebar'
              transition={{duration: 0.5}}
              >harfool gujjar
              </motion.span>
-            <div className="socialLink">
+            <motion.div className="socialLink"
+            initial={{opacity:0 , scale:0.5}}
+            animate={{opacity:1 , scale :1}}
+            transition={{duration : 0.5}}
+            >
                <a href=""><img src="/public/linkdin.png" alt="" /></a>
-               <a href=""><img src="/public/instagram1.png" alt="" /></a>
+               <a href=""><img src="/public/twitter.png" alt="" /></a>
                <a href=""><img src="/public/github.png" alt="" /></a>
                <a href=""><img src="/public/whatsapp.png" alt="" /></a>
-            </div>
+            </motion.div>
         </div>
     </div>
   )
