@@ -1,9 +1,11 @@
 import './App.css'
+import Hero from './components/hero section/Hero';
 import Navbar from './components/navbar/Navbar';
 const App = () => {
   return <div>
     <section id='Homepage'>
       <Navbar/>
+      <Hero/>
     </section>
     <section id='Services'>parellex</section>
     <section >services</section>
