@@ -18,7 +18,7 @@
   height: 100vh; /* Full height for the background */
   background: rgb(236, 241, 241); /* Use a valid color */
   color: aliceblue;
-  z-index: 1; /* Place it below the button */
+  z-index: 100; /* Place it below the button */
 }
 
 

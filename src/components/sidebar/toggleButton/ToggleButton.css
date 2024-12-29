@@ -7,7 +7,7 @@
     left: 25px; /* Adjust placement as needed */
     background-color: transparent; /* Example green background */
     border: none;
-    z-index: 3; /* Ensure it appears above other elements */
+    z-index: 1000; 
     cursor: pointer;
     transition: background-color 0.3s ease; /* Add hover effect */
   }
