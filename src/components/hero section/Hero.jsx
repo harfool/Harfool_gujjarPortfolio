@@ -40,7 +40,7 @@ const SliderVariants = {
     
   },
   animate: {
-    x: "-200%",
+    x: "-360%",
    
     transition: {
       repeatType : "mirror",
@@ -85,7 +85,7 @@ const Hero = () => {
       <motion.div variants={SliderVariants} 
       initial="initial"
       animate ="animate"
-      className="sliding-text">HARFOOL GUJJAR</motion.div>
+      className="sliding-text">FRONT-END DEVELOPER HARFOOL GUJJAR</motion.div>
 
       <div className="img-container">
         <motion.img
