@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 50px 20px;
-    color: #fff; /* Adjusted for readability */
+    color: #fff; 
   }
   
   .text-container-Service {
@@ -40,29 +40,26 @@
   
   .title-container .title h1 {
     font-weight: 100;
-    font-size: 72px; /* Adjusted for responsive sizing */
+    font-size: 72px;
     margin: 10px 0;
   }
   
   .list-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
     gap: 30px;
     max-width: 1200px;
     margin: auto;
   }
   
   .list-container .box {
-    background: #111; /* Slightly lighter background for contrast */
+    background: #111; 
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  
-    
-    margin-bottom: 20px;
+    margin-bottom: 200px;
   }
   
 
@@ -93,6 +90,5 @@
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
   }
   

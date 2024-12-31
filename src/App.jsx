@@ -2,6 +2,7 @@ import './App.css'
 import Hero from './components/hero section/Hero';
 import Navbar from './components/navbar/Navbar';
 import Parellex from './components/parellax/Parellex';
+import Portfolio from './components/portfolio/Portfolio';
 import Services from './components/services/Services';
 const App = () => {
   return <div>
@@ -12,9 +13,7 @@ const App = () => {
     <section id='Services'> <Parellex type="Services" /> </section>
     <section > <Services/> </section>
     <section id='Portfolio'><Parellex type="Portfolio" /> </section>
-    <section >portfolio1</section>
-    <section>portfolio2</section>
-    <section>portfolio3</section>
+    <Portfolio/>
     <section id='Contact'>Contact</section>
   </div>;
 };

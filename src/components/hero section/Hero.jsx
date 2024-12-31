@@ -66,10 +66,10 @@ const Hero = () => {
           <motion.h1 variants={textItemVariants}>Front End Developer</motion.h1>
 
           <motion.div className="buttons" variants={containerVariants}>
-            <motion.button variants={textItemVariants}>
+            <motion.button variants={textItemVariants}  >
               See the Latest Work
             </motion.button>
-            <motion.button variants={textItemVariants}>Contact me</motion.button>
+            <motion.button variants={textItemVariants}  >Contact me</motion.button>
           </motion.div>
 
           <motion.img
@@ -89,7 +89,9 @@ const Hero = () => {
 
       <div className="img-container">
         <motion.img
-          src="/public/Hero.png "
+          drag
+          dragElastic={.6}
+          src="/public/Hero.png"
           alt="Hero"
           className="hero-image"
           
