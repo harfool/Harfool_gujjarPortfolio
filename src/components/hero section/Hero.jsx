@@ -90,6 +90,8 @@ const Hero = () => {
       <div className="img-container">
         <motion.img
           drag
+          // dragConstraints={{width : 100px ,}}
+          // dragSnapToOrigin={0.6} 
           dragElastic={.6}
           src="/public/Hero.png"
           alt="Hero"

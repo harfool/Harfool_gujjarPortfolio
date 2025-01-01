@@ -28,34 +28,40 @@ const Navbar = () => {
             transition={{
               duration: 3,
             }}
-            href=""
+            href="https://www.linkedin.com/in/harfool-gurjar-a65660253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"
           >
-            <img src="/public/linkdin.png" alt="" />
+            <img src="/public/linkdin.png" alt="linkdin" />
           </motion.a>
           <motion.a
             whileHover={animation}
             transition={{
               duration: 3,
             }}
-            href=""
+            href="https://x.com/harfool_gurjar0"
+            target="_blank"
           >
-            <img src="/public/twitter.png" alt="" />
+            <img src="/public/twitter.png" alt="twitter" />
           </motion.a>
+
           <motion.a
             whileHover={animation}
             transition={{
               duration: 3,
             }}
-            href=""
+            target="_blank"
+            href="https://github.com/harfool"
           >
             <img src="/public/github.png" alt="" />
           </motion.a>
+
           <motion.a
             whileHover={animation}
             transition={{
               duration: 3,
             }}
-            href=""
+            href="https://wa.me/+919610237965"
+            target="_blank"
           >
             <img src="/public/whatsapp.png" alt="" />
           </motion.a>

@@ -27,7 +27,7 @@ const PortfolioSection = ({ portfolio }) => {
   const ref = useRef();
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start start", "end start"],
+    offset: ["start start ", "end start"],
   });
 
   const Y = useTransform(scrollYProgress, [0, 1], ["35%","-300%",]);
