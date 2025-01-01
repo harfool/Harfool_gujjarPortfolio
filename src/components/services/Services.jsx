@@ -35,7 +35,7 @@ const Services = () => {
     <motion.div
       className="Services"
       ref={ref}
-      variants={variants}
+      // variants={variants}
       initial="initial" 
       animate={isInView ? "animate" : "exit"} 
     >

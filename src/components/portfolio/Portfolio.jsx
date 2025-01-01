@@ -10,17 +10,18 @@ const portfolioList = [
     desc: "Go Online E-learning Education website using React, Node, Express, MongoDB.",
   },
   {
-    id: 2,
-    title: "Food Ordering Website - Cafe",
-    img: "https://images.unsplash.com/photo-1706545602642-fa0a6c3a540a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDR8RnpvM3p1T0hONnd8fGVufDB8fHx8fA%3D%3D",
-    desc: "Food ordering website Cafe using React, Node, Express, MongoDB.",
-  },
-  {
     id: 3,
     title: "E-commerce Website",
     img: "https://images.unsplash.com/photo-1734942416345-ed84ae363c5e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEwfEZ6bzN6dU9ITjZ3fHxlbnwwfHx8fHw%3D",
     desc: "E-commerce website using React, Node, Express, MongoDB.",
   },
+  {
+    id: 2,
+    title: "Food Ordering Website - Cafe",
+    img: "https://images.unsplash.com/photo-1706545602642-fa0a6c3a540a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDR8RnpvM3p1T0hONnd8fGVufDB8fHx8fA%3D%3D",
+    desc: "Food ordering website Cafe using React, Node, Express, MongoDB.",
+  },
+ 
 ];
 
 const PortfolioSection = ({ portfolio }) => {
@@ -30,7 +31,7 @@ const PortfolioSection = ({ portfolio }) => {
     offset: ["start start ", "end start"],
   });
 
-  const Y = useTransform(scrollYProgress, [0, 1], ["35%","-300%",]);
+  const Y = useTransform(scrollYProgress, [0, 1], ["10%","-300%",]);
 
   return (
     <section ref={ref}>
