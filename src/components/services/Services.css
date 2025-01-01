@@ -92,3 +92,8 @@
     cursor: pointer;
   }
   
+  @media (max-width){
+    .text-container-Service{
+      
+    }
+  }

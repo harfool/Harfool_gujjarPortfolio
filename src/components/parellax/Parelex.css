@@ -39,3 +39,17 @@ h1{
     z-index: 1;
 
 }
+@media (max-width : 768px) {
+    h1{
+        font-size: 89px;
+        text-align: center;
+    }
+    .moutains{
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .planets{
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}

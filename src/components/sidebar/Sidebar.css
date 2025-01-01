@@ -4,21 +4,24 @@
   align-items: center;
   justify-content: center;
   color: rgb(17, 17, 60);
-  position: relative; /* Ensure proper positioning context */
-
-  height: 100hv;
-
-}
+  background-color: #fff;
+  max-height: 100vh;
+  }
 
 .bg {
   position: fixed;
   top: 0;
   left: 0;
-  width: 300px;
-  height: 100vh; /* Full height for the background */
-  background: rgb(236, 241, 241); /* Use a valid color */
+  bottom: 0;
+  right: 0;
+  width: 400px;
+  background: rgb(236, 241, 241); 
   color: aliceblue;
-  z-index: 100; /* Place it below the button */
+  z-index: 100; 
 }
 
-
+@media (max-width : 738px) {
+  .sidebar{
+    display: none ;
+  }
+}

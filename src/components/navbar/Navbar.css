@@ -12,8 +12,9 @@
     margin-left: 7em;
 }
 
-.navbar .wraper span {
-    font-size: 2em;
+.navbar .wraper .MyLogo {
+   width: 180px;
+   height: 50px;
 }
 
 .navbar .wraper .socialLink {
@@ -24,4 +25,29 @@
 .navbar .wraper .socialLink img {
     height: 30px;
     width: 30px;
+}
+
+@media (max-width : 738px) {
+    .navbar .wraper .MyLogo {
+        width: 200px;
+        height: 50px;
+        margin: 100px;
+     }
+    .navbar .wraper {
+     justify-content: flex-end;
+    } 
+    .navbar .wraper .socialLink {
+        margin: 10px 10px 10px 11px;
+
+    }
+
+}
+
+@media (max-width : 1024px) {
+    
+}
+
+@media (max-width : 1366px) {
+   
+
 }

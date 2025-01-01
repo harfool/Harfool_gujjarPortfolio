@@ -17,10 +17,10 @@ const App = () => {
     <section id='Services'> <Parellex type="Services" /> </section>
     <section > <Services/> </section>
     <section id='Portfolio'><Parellex type="Portfolio" /> </section>
-    <Portfolio/>
-    <section id='Contact'>
+    {/* <Portfolio/> */}
+    {/* <section id='Contact'>
       <Contact/>
-    </section>
+    </section> */}
   </div>;
 };
 

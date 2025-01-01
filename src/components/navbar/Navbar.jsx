@@ -10,13 +10,18 @@ const Navbar = () => {
     <div className="navbar">
       <Sidebar />
       <div className="wraper">
-        <motion.span
+        {/* <motion.span
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 , x :[10,20,30]}}
           transition={{ duration: 3 }}
         >
           harfool gujjar
-        </motion.span>
+        </motion.span> */}
+        <motion.img  className="MyLogo" src="/public/my logo.png" alt="" 
+        
+        initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 , x :[10,20,30]}}
+          transition={{ duration: 3 }}/>
         <motion.div
           className="socialLink"
           initial={{ opacity: 0, scale: 0.5 }}

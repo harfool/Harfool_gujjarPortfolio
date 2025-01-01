@@ -1,3 +1,4 @@
+
 .Corsur{
     width: 50px;
     height: 50px;
@@ -5,4 +6,10 @@
     border: 1px solid white;
     position: fixed;
     z-index: 999;
+}
+
+@media (max-width : 738px) {
+    .Corsur{display: none;}
+    
+    
 }
