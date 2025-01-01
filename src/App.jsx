@@ -1,5 +1,6 @@
 import './App.css'
 import Contact from './components/contact/Contact';
+import Corsur from './components/cursor/Corsur';
 import Hero from './components/hero section/Hero';
 import Navbar from './components/navbar/Navbar';
 import Parellex from './components/parellax/Parellex';
@@ -7,6 +8,8 @@ import Portfolio from './components/portfolio/Portfolio';
 import Services from './components/services/Services';
 const App = () => {
   return <div>
+    <Corsur/>
+
     <section id='Homepage'>
       <Navbar/>
       <Hero/>
