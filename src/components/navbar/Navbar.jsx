@@ -8,7 +8,7 @@ const Navbar = () => {
   };
   return (
     <div className="navbar">
-      <Sidebar />
+      {/* <Sidebar /> */}
       <div className="wraper">
         {/* <motion.span
           initial={{ opacity: 0, scale: 0.5 }}
@@ -21,7 +21,7 @@ const Navbar = () => {
         
         initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 , x :[10,20,30]}}
-          transition={{ duration: 3 }}/>
+          transition={{ duration: 1 }}/>
         <motion.div
           className="socialLink"
           initial={{ opacity: 0, scale: 0.5 }}

@@ -31,7 +31,7 @@ const PortfolioSection = ({ portfolio }) => {
     offset: ["start start ", "end start"],
   });
 
-  const Y = useTransform(scrollYProgress, [0, 1], ["10%","-300%",]);
+  const Y = useTransform(scrollYProgress, [0, 1], ["35%","-300%",]);
 
   return (
     <section ref={ref}>
@@ -62,7 +62,7 @@ const Portfolio = () => {
   });
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
-    damping: 30,
+    damping: 40,
   });
 
   return (
