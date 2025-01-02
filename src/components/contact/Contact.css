@@ -112,6 +112,7 @@ font-weight: 500;
         width: 320px;
         flex-direction: column;
         gap: 10px;
+        margin: auto;
     }
     
     .contact-form-container input ,textarea {

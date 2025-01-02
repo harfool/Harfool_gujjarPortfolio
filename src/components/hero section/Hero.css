@@ -29,9 +29,10 @@
   letter-spacing: 5px;
 }
 
-.text-container h1 {
-  font-size: 4.5em;
-  color: rgb(176, 171, 180);
+
+.text-container h2 span {
+  /* font-size: 4.5em; */
+  color:orange;
   letter-spacing: 1px;
 }
 

@@ -1,4 +1,5 @@
 import './App.css'
+import About from './components/about/About';
 import Contact from './components/contact/Contact';
 import Corsur from './components/cursor/Corsur';
 import Hero from './components/hero section/Hero';
@@ -18,6 +19,7 @@ const App = () => {
     <section > <Services/> </section>
     <section id='Portfolio'><Parellex type="Portfolio" /> </section>
     <Portfolio/>
+    <section> <About/> </section>
     <section id='Contact'>
       <Contact/>
     </section>

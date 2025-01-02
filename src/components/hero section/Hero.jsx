@@ -53,8 +53,8 @@ const SliderVariants = {
 
 const Hero = () => {
 
-  const typedElement = useRef(null); // To reference the element where the text appears
-  const typedInstance = useRef(null); // To store the Typed.js instance
+  const typedElement = useRef(null); 
+  const typedInstance = useRef(null); 
   
   useEffect(() => {
     // Initialize Typed.js

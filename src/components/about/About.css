@@ -1,0 +1,176 @@
+.about-container {
+  background: rgb(2, 2, 28);
+  color: #fff;
+  padding: 50px 20px;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.wrapper {
+  flex: 1;
+  margin: auto;
+}
+
+.about-img {
+  flex: 1;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img img {
+  width: 50%;
+  max-height: 580px;
+  object-fit: cover;
+  align-items: center;
+  border-radius: 100px;
+}
+
+.about-content {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.about-content h1 {
+  font-size: 36px;
+  color: orange;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.tag {
+  background: rgb(2, 2, 28);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  border: 1px solid #555;
+  cursor: default;
+}
+
+.mern-stack {
+  text-align: center;
+}
+.wrapper .hire-me a {
+  background: orange;
+  font-weight: 500;
+  margin: 10px 10px;
+  padding: 10px;
+  border-radius: 12px;
+}
+.mern-stack h2 {
+  font-size: 28px;
+  color: orange;
+  margin-bottom: 20px;
+}
+
+.stack-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.stack-icons img {
+  width: 60px;
+  height: 60px;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    padding: 20px 10px;
+    height: auto;
+  }
+  .about-img {
+    margin: 50px auto;
+  }
+
+  .about-img img {
+    width: 700px;
+    height: 500px;
+    border-radius: 50px;
+  }
+
+  .about-content h1 {
+    font-size: 28px;
+  }
+
+  .about-content p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .tags-container {
+    justify-content: flex-start;
+    gap: 5px;
+  }
+
+  .tag {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+
+  .mern-stack h2 {
+    font-size: 24px;
+  }
+
+  .stack-icons img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 15px 5px;
+    margin-top: 30px;
+  }
+
+  .about-img img {
+    width: 290px;
+    max-height: 300px;
+  }
+
+  .about-content h1 {
+    font-size: 24px;
+  }
+
+  .about-content p {
+    font-size: 12px;
+  }
+
+  .tags-container {
+    gap: 5px;
+  }
+  .mern-stack {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .mern-stack h2 {
+    font-size: 20px;
+  }
+
+  .stack-icons img {
+    width: 40px;
+    height: 40px;
+  }
+}

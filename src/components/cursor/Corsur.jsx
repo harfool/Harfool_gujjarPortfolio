@@ -22,7 +22,6 @@ const Corsur = () => {
             window.removeEventListener("mousemove" , mouseMove)
         }
     } , [])
-    console.log(position)
 
   return (
     <motion.div className="Corsur"  animate={{x :position.x+10 ,y : position.y+10}}></motion.div>
