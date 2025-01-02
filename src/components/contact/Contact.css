@@ -51,12 +51,92 @@ font-weight: 500;
     position: absolute;
     margin: auto;
     z-index: -1 ;
-    /* margin-bottom: 100px; */
-
-    /* stroke: #ffa500; */
+    
 }
 .svg img{
     object-fit: cover;
-    width: 70%;
-    height: 70%;
+    width: 80%;
+    height: 80%;
+    margin: auto 3em;
+    padding: 2em;
+
+}
+
+
+@media (max-width : 768px) {
+    .Contact-container{
+        height: 100%;
+        width: 100;
+        display: flex;
+        align-items: center;
+        margin: auto;
+        gap: 20px;
+        flex-direction: column;
+
+    }
+    .contact-text-container{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+     }
+     .contact-text-container h1{
+        font-size: 30px;
+        letter-spacing: 8px;
+        line-height: 30px; 
+        margin: 35px auto 5px auto ; 
+    
+    }
+    .container-items{
+        font-weight: 200 ;
+        line-height: 20px;
+        text-align: center;
+    }
+    .container-items h2 {
+        font-weight: 400 ;
+        line-height: 40px;
+        font-size: 30px;
+        color: orange;
+        letter-spacing: 10px;
+    }
+    .container-items span{
+        line-height: 40px;
+        font-size: 20px;
+        color: rgb(180, 166, 140);
+        letter-spacing: 4px;
+        border-bottom: 1px solid ;
+
+    }
+    .contact-form-container{
+        display: flex;
+        width: 320px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .contact-form-container input ,textarea {
+        padding: 10px;
+        width: 110%;
+        background-color: transparent;
+        border: 1px solid gray;
+        border-radius: 8px;
+        color: orange;
+    }
+    .contact-form-container form button{
+    padding: 10px;
+    border: none;
+    background-color: orange;
+    cursor: pointer;
+    font-weight: 500;
+    width: 350px;
+    }
+    .svg{
+        /* background: red; */
+    }
+    .svg img{
+        margin: auto 3em;
+
+
+    }
+    
 }

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import "./Contact.css";
-import emailjs from '@emailjs/browser'
+import emailjs from "@emailjs/browser";
 const variants = {
   initial: {
     y: 500,
@@ -21,28 +21,29 @@ const Contact = () => {
   const ref = useRef();
   const FormRef = useRef();
   const isInView = useInView(ref, { margin: "-100px" });
-  const [error , setError ] = useState(false)
-  const [success , setSuccess ] = useState(false)
- 
+  const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
+
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        "service_bmbpg3d",  // Replace with your EmailJS Service ID
+        "service_bmbpg3d", // Replace with your EmailJS Service ID
         "template_hdrzjio", // Replace with your EmailJS Template ID
         FormRef.current,
-        "aKwTwsM2jmkeSX-oj"   // Replace with your EmailJS Public Key
+        "aKwTwsM2jmkeSX-oj" // Replace with your EmailJS Public Key
       )
-     .then((result)=>{
-        console.log(result.text)
-        setSuccess(true)
-
-     },(error)=>{
-        setError(true)
-        console.log(error.text)
-     }
-    )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setSuccess(true);
+        },
+        (error) => {
+          setError(true);
+          console.log(error.text);
+        }
+      );
 
     e.target.reset(); // Reset the form fields after submission
   };
@@ -54,7 +55,7 @@ const Contact = () => {
       initial="initial"
       animate="animate"
       ref={ref}
-    >
+      >
       <motion.div className="contact-text-container">
         <motion.h1 variants={variants}>
           Let's develop your next big thing Together?{" "}
@@ -76,15 +77,15 @@ const Contact = () => {
             delay: 1,
           }}
         >
-            <img src="/public/ContactUs.gif" alt="" />
+          <img src="/public/ContactUs.gif" alt="" />
         </motion.div>
 
         <motion.form
-        onSubmit={sendEmail}
+          onSubmit={sendEmail}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{
-            duration: .1,
+            duration: 0.1,
             delay: 2,
           }}
           ref={FormRef}
@@ -93,8 +94,10 @@ const Contact = () => {
           <input type="email" required placeholder="Email" name="email" />
           <textarea rows={8} placeholder="Message" name="message" />
           <button type="submit">Submit</button>
-          {success && <p style={{color :"green"}}>Message send succussfully</p>}
-          {error && <p style={{color :"red"}}>failed </p>}
+          {success && (
+            <p style={{ color: "green" }}>Message send succussfully</p>
+          )}
+          {error && <p style={{ color: "red" }}>failed </p>}
         </motion.form>
       </motion.div>
     </motion.div>

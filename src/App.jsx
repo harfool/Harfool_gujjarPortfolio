@@ -18,9 +18,9 @@ const App = () => {
     <section > <Services/> </section>
     <section id='Portfolio'><Parellex type="Portfolio" /> </section>
     <Portfolio/>
-    {/* <section id='Contact'>
+    <section id='Contact'>
       <Contact/>
-    </section> */}
+    </section>
   </div>;
 };
 
