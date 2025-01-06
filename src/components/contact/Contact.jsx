@@ -29,10 +29,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_bmbpg3d", // Replace with your EmailJS Service ID
-        "template_hdrzjio", // Replace with your EmailJS Template ID
+        "service_bmbpg3d",
+        "template_hdrzjio",
         FormRef.current,
-        "aKwTwsM2jmkeSX-oj" // Replace with your EmailJS Public Key
+        "aKwTwsM2jmkeSX-oj"
       )
       .then(
         (result) => {
@@ -45,7 +45,7 @@ const Contact = () => {
         }
       );
 
-    e.target.reset(); // Reset the form fields after submission
+    e.target.reset();
   };
 
   return (
@@ -55,16 +55,27 @@ const Contact = () => {
       initial="initial"
       animate="animate"
       ref={ref}
-      >
+    >
       <motion.div className="contact-text-container">
         <motion.h1 variants={variants}>
           Let's develop your next big thing Together?{" "}
         </motion.h1>
         <motion.div className="container-items" variants={variants}>
+          <motion.div className="icons-for-contact" variants={variants}>
+            <motion.img src="/public/google-maps.png" alt="" />
+          </motion.div>
           <h2>Address</h2>
-          <span>Bhilwara</span>
-          <h2>Mail</h2>
-          <span>Harfoolgujjar63@gmail.com</span>
+          <span>Bhilwara</span> <br />    
+          <motion.div className="icons-for-contact" variants={variants}>
+            <motion.img src="/public/email.png" alt="" />
+          </motion.div>
+          <h2>Mail</h2> 
+          <span>Harfoolgujjar63@gmail.com</span> <br />
+          <motion.div className="icons-for-contact" variants={variants}>
+            <motion.img src="/public/telephone.png" alt="" />
+          </motion.div>
+          <h2>Phone</h2>
+          <span>9610237965</span> <br />
         </motion.div>
       </motion.div>
       <motion.div className="contact-form-container">

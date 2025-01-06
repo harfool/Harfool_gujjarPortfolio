@@ -6,18 +6,38 @@ const Navbar = () => {
     scale: 1.4,
     rotateZ: "360deg",
   };
+  const sidebarMenu = [
+    "Homepage",
+    "Services",
+    "Portfolio",
+    "Contact",
+    "About"
+  ]
   return (
     <div className="navbar">
       {/* <Sidebar /> */}
       <div className="wraper">
-        {/* <motion.span
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 , x :[10,20,30]}}
+        <motion.div
+        className="navLinks"
+          initial={{ opacity: 0,  }}
+          animate={{ opacity: 1 , x :[null  ,30]}}
           transition={{ duration: 3 }}
         >
-          harfool gujjar
-        </motion.span> */}
+           {sidebarMenu.map((items) => (
+                  <motion.a
+                    href={`#${items}`}
+                    key={items}
+                    // whileHover={{ scale: 1.2 }}
+                    whileTap={{ color: "red", scale: 1 }}
+                  >
+                    {" "}
+                    {items}{" "}
+                  </motion.a>
+                ))}
+        </motion.div>
         <motion.img  className="MyLogo" src="/public/my logo.png" alt="" 
+
+        
         
         initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 , x :[10,20,30]}}
