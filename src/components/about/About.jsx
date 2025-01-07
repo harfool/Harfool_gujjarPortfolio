@@ -108,6 +108,7 @@ const About = () => {
           />
         </motion.div>
       </motion.div>
+    
     </motion.div>
     <motion.div className="about-img" variants={textItemVariants} >
         <motion.img src="/public/about.jpg" alt="" />

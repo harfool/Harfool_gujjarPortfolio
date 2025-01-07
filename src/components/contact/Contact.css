@@ -93,6 +93,21 @@ font-weight: 500;
 
 }
 
+.follow-me{
+    color: orange;
+    margin:20px ;
+    
+}
+.follow-me h2{
+    font-size: 34px;
+    letter-spacing: 7px;
+}
+
+.socialLink img {
+    height: 40px;
+    width: 40px;
+   margin-right:15px ;
+}
 
 @media (max-width : 768px) {
     .Contact-container{

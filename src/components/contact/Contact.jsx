@@ -65,11 +65,11 @@ const Contact = () => {
             <motion.img src="/public/google-maps.png" alt="" />
           </motion.div>
           <h2>Address</h2>
-          <span>Bhilwara</span> <br />    
+          <span>Bhilwara</span> <br />
           <motion.div className="icons-for-contact" variants={variants}>
             <motion.img src="/public/email.png" alt="" />
           </motion.div>
-          <h2>Mail</h2> 
+          <h2>Mail</h2>
           <span>Harfoolgujjar63@gmail.com</span> <br />
           <motion.div className="icons-for-contact" variants={variants}>
             <motion.img src="/public/telephone.png" alt="" />
@@ -77,6 +77,59 @@ const Contact = () => {
           <h2>Phone</h2>
           <span>9610237965</span> <br />
         </motion.div>
+       <motion.div className="follow-me" variants={variants} >
+       <motion.h2 variants={variants}>Follow me</motion.h2>
+
+       <motion.div
+          className="socialLink"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <motion.a
+            // whileHover={animation}
+            transition={{
+              duration: 3,
+            }}
+            href="https://www.linkedin.com/in/harfool-gurjar-a65660253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"
+          >
+            <img src="/public/linkdin.png" alt="linkdin" />
+          </motion.a>
+          <motion.a
+            // whileHover={animation}
+            transition={{
+              duration: 3,
+            }}
+            href="https://x.com/harfool_gurjar0"
+            target="_blank"
+          >
+            <img src="/public/twitter.png" alt="twitter" />
+          </motion.a>
+
+          <motion.a
+            // whileHover={animation}
+            transition={{
+              duration: 3,
+            }}
+            target="_blank"
+            href="https://github.com/harfool"
+          >
+            <img src="/public/github.png" alt="" />
+          </motion.a>
+
+          <motion.a
+            // whileHover={animation}
+            transition={{
+              duration: 3,
+            }}
+            href="https://wa.me/+919610237965"
+            target="_blank"
+          >
+            <img src="/public/whatsapp.png" alt="" />
+          </motion.a>
+        </motion.div>
+       </motion.div>
       </motion.div>
       <motion.div className="contact-form-container">
         <motion.div
