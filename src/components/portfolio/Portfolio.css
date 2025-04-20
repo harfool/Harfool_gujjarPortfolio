@@ -116,9 +116,9 @@
   }
 
   .portfolioTextContainer h2 {
-    font-size: 30px;
+    font-size: 20px;
     color: orange;
     font-weight: bold;
-    line-height: 1;
+    line-height: 1.2;
   }
 }
