@@ -61,7 +61,9 @@ const Services = () => {
             <motion.h2>{service.title}</motion.h2>
             <motion.p>{service.description1}</motion.p>
             <motion.p>{service.description2}</motion.p>
-            <motion.button>go</motion.button>
+            <motion.button>
+               <a href="https://www.linkedin.com/in/harfool-gurjar-a65660253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              target="_blank"> go </a> </motion.button>
           </motion.div>
         ))}
       </motion.div>
