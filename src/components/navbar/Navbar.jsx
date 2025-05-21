@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import "./Navbar.CSS";
+import "./Navbar.css";
 import Sidebar from "../sidebar/Sidebar";
 const Navbar = () => {
   const animation = {
