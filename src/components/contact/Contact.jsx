@@ -94,7 +94,7 @@ const Contact = () => {
               href="https://www.linkedin.com/in/harfool-gurjar-a65660253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               target="_blank"
             >
-              <img src="https://console.cloudinary.com/app/c-ae49d342cc9786813f73a5e518ef6a/assets/media_library/search/asset/e1155eafefcc2033503172a8d2808ee9/manage/summary?q=&view_mode=mosaic&context=manage" alt="linkdin" />
+              <img src="https://res.cloudinary.com/dxl5sr7vp/image/upload/v1747846412/about_tqkndq.jpg" alt="linkdin" />
             </motion.a>
             <motion.a
               // whileHover={animation}
