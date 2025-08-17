@@ -136,7 +136,7 @@ const Experience = () => {
                 variants={staggerChildren}
                 className="space-y-2"
               >
-                <div className="text-3xl font-bold text-primary">8+</div>
+                <div className="text-3xl font-bold text-primary">10+</div>
                 <div className="text-muted-foreground">Months Experience</div>
               </motion.div>
               

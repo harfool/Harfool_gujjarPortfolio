@@ -98,10 +98,20 @@ const About = () => {
                 variants={staggerChildren}
                 className="glass-card-elevated p-8 text-center"
               >
-                <div className="w-48 h-48 mx-auto mb-6 glass-card rounded-full flex items-center justify-center bg-gradient-to-br from-primary/20 to-accent/20">
-                  <div className="w-32 h-32 glass-card rounded-full flex items-center justify-center text-6xl">
-                    👨‍💻
-                  </div>
+                {/* Updated circular avatar with improved face visibility */}
+                <div className="group relative mx-auto mb-6 w-48 h-48 sm:w-52 sm:h-52 lg:w-56 lg:h-56 rounded-full ring-2 ring-primary/40 shadow-lg bg-gradient-to-br from-primary/30 via-primary/10 to-accent/30 overflow-hidden">
+                  <img
+                    src="https://res.cloudinary.com/df2maejnd/image/upload/v1751013823/bc2638c8-9275-472f-94ce-b235ef5da132_qtb5ry.png"
+                    alt={`${profile.name} avatar`}
+                    className="w-full h-full object-cover object-top select-none pointer-events-none transition-transform duration-700 ease-out group-hover:scale-105 group-hover:translate-y-1"
+                    loading="lazy"
+                    draggable={false}
+                    onError={(e) => { e.currentTarget.src = '/fallback-avatar.png'; }}
+                  />
+                  {/* Soft vignette to focus face */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/10"></div>
+                  {/* Radial highlight */}
+                  <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_35%_30%,rgba(255,255,255,0.18),transparent_65%)] mix-blend-overlay opacity-80 group-hover:opacity-100 transition-opacity"></div>
                 </div>
                 
                 <h3 className="text-2xl font-bold mb-2 text-gradient">

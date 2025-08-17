@@ -28,7 +28,7 @@ const Hero = () => {
       const value = parseInt(stat.value);
       if (!isNaN(value)) {
         animateCounter(`#stat-${index}`, value, {
-          delay: 2 + index * 0.2,
+          delay: 0.1,
           trigger: statsRef.current
         });
       }

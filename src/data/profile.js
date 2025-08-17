@@ -3,7 +3,7 @@ export const profile = {
   // Personal Information
   name: "Harfool Gurjar",
   title: "Frontend Developer · React Developer",
-  summary: "Performance-oriented, user-centric Front-End Developer with 8+ months experience building responsive, modular apps with React & modern UI. Improved load times by ~40% via memoization and code-splitting; Agile-ready with exposure to Node, PostgreSQL, MongoDB, and AI-driven systems.",
+  summary: "Performance-oriented, user-centric Front-End Developer with 10+ months experience building responsive, modular apps with React & modern UI. Improved load times by ~40% via memoization and code-splitting; Agile-ready with exposure to Node, PostgreSQL, MongoDB, and AI-driven systems.",
   location: "Ajmer, Rajasthan, India",
   
   // Contact Information  
@@ -138,7 +138,7 @@ export const profile = {
   // SEO and Meta
   seo: {
     title: "Harfool Gurjar - Frontend Developer | React.js Specialist",
-    description: "Performance-oriented Frontend Developer with 8+ months experience. Specializing in React.js, modern UI/UX, and responsive web applications. Available for freelance projects.",
+    description: "Performance-oriented Frontend Developer with 10+ months experience. Specializing in React.js, modern UI/UX, and responsive web applications. Available for freelance projects.",
     keywords: "Frontend Developer, React Developer, JavaScript, Web Development, UI/UX, Freelancer",
     ogImage: "/og-image.jpg"
   }
@@ -157,8 +157,8 @@ export const navigation = [
 
 // Statistics for hero section
 export const stats = [
-  { label: "Months Experience", value: "8+", suffix: "" },
-  { label: "Projects Completed", value: "10", suffix: "+" },
+  { label: "Months Experience", value: "10 + ", suffix: "" },
+  { label: "Projects Completed", value: "5", suffix: "+" },
   { label: "Performance Boost", value: "40", suffix: "%" },
   { label: "Client Satisfaction", value: "100", suffix: "%" }
 ];
