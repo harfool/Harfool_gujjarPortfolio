@@ -158,18 +158,17 @@ const Footer = () => {
             variants={staggerChildren}
             className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 text-muted-foreground text-sm"
           >
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center align-center space-x-4">
               <p>
                 © 2025 {profile.name}. All rights reserved.
               </p>
               <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse "></div>
                 <span>Available for freelance</span>
               </div>
             </div>
             
             <div className="flex items-center space-x-6">
-              <span>Built with React & Tailwind CSS</span>
               <motion.button
                 onClick={scrollToTop}
                 whileHover={{ y: -2 }}

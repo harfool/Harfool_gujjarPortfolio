@@ -3,6 +3,10 @@ import { profile } from '../data/profile.js';
 import { fadeInUp, fadeInLeft, fadeInRight, staggerContainer, staggerChildren } from '../lib/variants.js';
 
 const About = () => {
+  // WhatsApp contact config
+  const whatsappNumber = '919610237965'; // remove '+' per wa.me requirement
+  const hireMeMessage = encodeURIComponent("Hi Harfool! I just visited your portfolio and would like to discuss a project.");
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${hireMeMessage}`;
   return (
     <section id="about" className="py-24 relative">
       <div className="container mx-auto px-6">
@@ -154,6 +158,21 @@ const About = () => {
                     </svg>
                   </motion.a>
                 </div>
+                {/* Hire Me Now WhatsApp CTA */}
+                <motion.a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-primary to-accent text-white text-sm font-semibold shadow-lg shadow-accent/20 hover:shadow-accent/40 transition-all focus:outline-none focus:ring-2 focus:ring-accent/50"
+                  aria-label="Open WhatsApp chat to hire me now"
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.17 5.3 5.31.16 11.654.16c3.17 0 6.155 1.237 8.407 3.488a11.79 11.79 0 013.481 8.401c-.003 6.344-5.143 11.48-11.486 11.48a11.9 11.9 0 01-5.938-1.586L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.593 5.24 0 9.538-4.274 9.541-9.509.003-5.26-4.246-9.518-9.507-9.52-5.237 0-9.51 4.27-9.512 9.504a9.48 9.48 0 001.588 5.276l-.999 3.648 3.497-.992zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.767.967-.94 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.173.198-.297.298-.495.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.099 3.204 5.077 4.492.709.306 1.263.489 1.694.626.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.288.173-1.412z" />
+                  </svg>
+                  Hire Me Now
+                </motion.a>
               </motion.div>
 
               {/* Quick Facts */}
