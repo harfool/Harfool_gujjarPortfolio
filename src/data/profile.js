@@ -4,13 +4,13 @@ export const profile = {
   name: "Harfool Gurjar",
   title: "Frontend Developer · React Developer",
   summary: "Performance-oriented, user-centric Front-End Developer with 10+ months experience building responsive, modular apps with React & modern UI. Improved load times by ~40% via memoization and code-splitting; Agile-ready with exposure to Node, PostgreSQL, MongoDB, and AI-driven systems.",
-  location: "Ajmer, Rajasthan, India",
+  location: "Bhilware, Rajasthan, India",
   
   // Contact Information  
   contact: {
     email: "harfoolgujjar63@gmail.com",
     phone: "+91 96102 37965",
-    linkedin: "https://www.linkedin.com/in/harfool-gurjar",
+    linkedin: "https://www.linkedin.com/in/harfool-gurjar-84997637a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     resume: "/HarfoolGujjarResume2025.pdf"
   },
 
@@ -68,8 +68,7 @@ export const profile = {
         "Responsive UI with role-based access"
       ],
       image: "/project-leetlab.jpg",
-      liveUrl: "#",
-      githubUrl: "#"
+      
     },
     {
       name: "AI-Powered Code Review & Generation Tool",
@@ -82,8 +81,6 @@ export const profile = {
         "Real-time analysis with MongoDB persistence"
       ],
       image: "/project-ai-code.jpg", 
-      liveUrl: "#",
-      githubUrl: "#"
     }
   ],
 
@@ -131,7 +128,7 @@ export const profile = {
   // Social Links
   social: {
     github: "https://github.com/harfool",
-    linkedin: "https://www.linkedin.com/in/harfool-gurjar",
+    linkedin: "https://www.linkedin.com/in/harfool-gurjar-84997637a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     twitter: "https://twitter.com/harfool"
   },
 
