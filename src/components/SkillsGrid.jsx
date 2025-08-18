@@ -169,7 +169,7 @@ const SkillsGrid = () => {
                     Node.js
                   </span>
                   <span className="skill-tag bg-accent/10 border-accent/20 text-accent text-xs">
-                    PostgreSQL
+                     MongoDB
                   </span>
                 </div>
               </motion.div>
@@ -191,7 +191,7 @@ const SkillsGrid = () => {
                     Docker
                   </span>
                   <span className="skill-tag bg-muted/10 border-muted/20 text-muted-foreground text-xs">
-                    MongoDB
+                    PostgreSQL
                   </span>
                   <span className="skill-tag bg-muted/10 border-muted/20 text-muted-foreground text-xs">
                     Prisma ORM

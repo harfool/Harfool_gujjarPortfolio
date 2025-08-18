@@ -90,7 +90,7 @@ export const profile = {
       degree: "BCA",
       institution: "Maharshi Dayanand Saraswati University (MDSU), Ajmer",
       period: "2022–2025",
-      status: "In Progress"
+      status: "Completed"
     }
   ],
 

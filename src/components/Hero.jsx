@@ -192,8 +192,8 @@ const Hero = () => {
         { text: 'Node.js', className: 'top-[8rem] right-[12rem]' },
         { text: 'Express.js', className: 'top-[12rem] right-[4rem]' },
   { text: 'MongoDB', className: 'top-[16rem] right-[10rem]', delay: '3s' },
-        { text: 'JavaScript', className: 'bottom-100 left-20', delay: '2s' },
-        { text: 'Tailwind CSS', className: 'top-1/2 left-52', delay: '4s' },
+        { text: 'JavaScript', className: 'top-[18rem] right-[2rem]', delay: '2s' },
+        { text: 'Tailwind CSS', className: 'top-[23rem] right-[6rem]', delay: '4s' },
       ].map((badge) => (
         <div
           key={badge.text}
