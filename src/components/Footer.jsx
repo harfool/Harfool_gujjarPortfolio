@@ -113,7 +113,7 @@ const Footer = () => {
                       <motion.button
                         onClick={() => scrollToSection(item.href)}
                         whileHover={{ x: 5 }}
-                        className="text-muted-foreground hover:text-foreground transition-colors duration-300 text-left"
+                        className="text-muted-foreground hover:text-foreground hover:decoration-slate-600 hover:box-shadow: var(--shadow-lg) transition-colors duration-300 text-left"
                       >
                         {item.name}
                       </motion.button>
