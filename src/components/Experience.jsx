@@ -102,9 +102,9 @@ const Experience = () => {
                       className="mt-6 pt-6 border-t border-glass-border/20"
                     >
                       <div className="flex flex-wrap gap-2">
-                        {['React.js', 'Figma-to-Code', 'WCAG', 'Performance Optimization', 'Agile'].map((skill, skillIndex) => (
+                        {(exp.skills && exp.skills.length ? exp.skills : profile.skills.frontend).map((skill, skillIndex) => (
                           <motion.span
-                            key={skill}
+                            key={skill + skillIndex}
                             initial={{ opacity: 0, scale: 0.8 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ delay: 0.6 + skillIndex * 0.05, duration: 0.2 }}
@@ -132,30 +132,20 @@ const Experience = () => {
             </h3>
             
             <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-              <motion.div
-                variants={staggerChildren}
-                className="space-y-2"
-              >
-                <div className="text-3xl font-bold text-primary">10+</div>
-                <div className="text-muted-foreground">Months Experience</div>
-              </motion.div>
-              
-              <motion.div
-                variants={staggerChildren}
-                className="space-y-2"
-              >
-                <div className="text-3xl font-bold text-accent">40%</div>
-                <div className="text-muted-foreground">Performance Boost</div>
-              </motion.div>
-              
-              <motion.div
-                variants={staggerChildren}
-                className="space-y-2"
-              >
-                <div className="text-3xl font-bold text-primary">25%</div>
-                <div className="text-muted-foreground">Faster UI Cycles</div>
-              </motion.div>
+              {profile.stats && profile.stats.map((stat, idx) => (
+                <motion.div
+                  key={stat.label + idx}
+                  variants={staggerChildren}
+                  className="space-y-2 text-center"
+                >
+                  <div className="text-3xl font-bold text-primary">
+                    {stat.value}{stat.suffix}
+                  </div>
+                  <div className="text-muted-foreground">{stat.label}</div>
+                </motion.div>
+              ))}
             </div>
+            
 
             <motion.div
               variants={staggerChildren}
