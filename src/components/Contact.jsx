@@ -3,15 +3,17 @@ import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { profile } from '../data/profile.js';
+import emailjs from '@emailjs/browser';
 import { sendEmail } from '../lib/email.js';
+import { useEffect } from 'react';
 import { staggerContainer, staggerChildren, formField } from '../lib/variants.js';
 // Form validation schema
 // Friendly validation schema (messages phrased for non-technical users)
 const contactSchema = z.object({
   name: z.string().min(2, 'Please enter at least 2 characters.'),
   email: z.string().email('That email doesn\'t look right.'),
-  subject: z.string().min(5, 'Please add a short subject (5+ characters).'),
-  message: z.string().min(10, 'Please write a little more (10+ characters).'),
+  subject: z.string().min(2, 'Please add a short subject (5+ characters).'),
+  message: z.string().min(3, 'Please write a little more (10+ characters).'),
 });
 
 const Contact = () => {
@@ -34,15 +36,19 @@ const Contact = () => {
     try {
       // Validate with Zod (will throw if invalid)
       const validatedData = contactSchema.parse(data);
-
-  // Send via EmailJS
-  await sendEmail(validatedData);
+      // Send via helper that builds template params (maps to template variables)
+      const res = await sendEmail(validatedData);
+      console.log('Email send response:', res);
       setSubmitStatus('success');
       reset();
       
     } catch (error) {
       console.error('Form submission error:', error);
       // Zod validation errors -> show field-level friendly messages, no global error banner
+      // If EmailJS returned an error message, include it in console for debugging
+      if (error?.text || error?.message) {
+        console.error('EmailJS error details:', error.text || error.message || error);
+      }
       if (error && error.errors) {
         error.errors.forEach(issue => {
           const field = issue.path?.[0];
@@ -59,6 +65,16 @@ const Contact = () => {
       setIsSubmitting(false);
     }
   };
+
+  // Initialize EmailJS client with public key (optional but helps some setups)
+  useEffect(() => {
+    try {
+      emailjs.init('aKwTwsM2jmkeSX-oj');
+    } catch (err) {
+      // non-fatal
+      console.debug('EmailJS init skipped or failed:', err?.message || err);
+    }
+  }, []);
 
   return (
     <section id="contact" className="py-24 relative">

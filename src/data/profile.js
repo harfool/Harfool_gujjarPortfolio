@@ -83,7 +83,7 @@ export const profile = {
     {
       role: "Freelance Software Engineer",
       company: "freelance",
-      period: " July 2025 – Presen",
+      period: " July 2025 – Present",
       location: "Remote",
       achievements: [
         `Built and deployed full-stack web applications using the MERN stack (MongoDB, Express.js, React, Node.js) for
@@ -176,7 +176,7 @@ export const profile = {
     "Landing pages",
     "Dashboards",
     "API integrations",
-    "React UI kits",
+    "full stack development",
   ],
 
   // Social Links
