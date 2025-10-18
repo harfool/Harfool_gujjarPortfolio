@@ -1,6 +1,5 @@
 // Single source of truth for portfolio content
 export const profile = {
-
   // Personal Information
   name: "Harfool Gurjar",
   title: "Frontend Developer · React Developer",
@@ -99,30 +98,25 @@ export const profile = {
   // Projects
   projects: [
     {
-      name: "LeetLab",
-      subtitle: "Online Code Execution Platform",
-      description:
-        "A comprehensive platform for online coding practice with real-time code execution and verdict system.",
-      stack: [
-        "React",
-        "Tailwind",
-        "Node",
-        "Express",
-        "Prisma ORM",
-        "PostgreSQL",
-        "Judge0 API",
-        "JWT",
-      ],
+      name: "Zoo Management System",
+      liveLink : "https://zms.chaipecharcha.tech/",
+      subtitle:
+        "A web application to manage zoo operations including animal records, staff management, and visitor tracking.",
+      stack: ["React", "Tailwind", "Node", "Express", "MongoDB", "JWT"],
       highlights: [
-        "REST APIs for users/problems/submissions",
-        "Live code execution with real-time verdicts",
-        "Responsive UI with role-based access",
+        `Built a public zoo site (animals catalogue, detail, tickets) and an admin dashboard with RBAC (owner/admin/editor).`,
+        `Frontend: React Router SPA, Zustand stores (admins/animals/orders), prefetch-on-click navigation, role-sorted
+ admin table, responsive UI with Tailwind`,
+        `Backend: Express + Mongoose REST APIs, middlewares (verifyJWT, requireAdminRole), pagination, file uploads
+ (Multer/Cloudinary), QR ticket generation.`,
       ],
-      image: "/project-leetlab.jpg",
+      image: "/public/zoo-management.png",
     },
     {
       name: " Marwar Saheli | E-Commerce ",
-      subtitle: "An ecommerce platform for selling authentic Rajasthani spices online.",
+     liveLink: "https://marwarsaheli.com/",
+      subtitle:
+        "An ecommerce platform for selling authentic Rajasthani spices online.",
 
       stack: [
         "MongoDB",
@@ -133,11 +127,11 @@ export const profile = {
         "razorpay API",
       ],
       highlights: [
-       ` Frontend: responsive e-commerce UI with product listings, categories, search, reviews, image optimization and lazy
- loading; state managed with Zustand` ,
+        ` Frontend: responsive e-commerce UI with product listings, categories, search, reviews, image optimization and lazy
+ loading; state managed with Zustand`,
         ` Backend: Express + Mongoose APIs for users, products, orders, payments, shipping; controllers, middleware,
  robust error handling and logging.`,
-      `Admin Dashboard: Implemented Role-Based Access Control (RBAC), CRUD for products/categories, and order
+        `Admin Dashboard: Implemented Role-Based Access Control (RBAC), CRUD for products/categories, and order
  management to ensure secure and efficient administration.`,
       ],
       image: "/public/marwar-sahli.png",
