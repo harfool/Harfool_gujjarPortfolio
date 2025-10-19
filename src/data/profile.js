@@ -164,16 +164,17 @@ export const profile = {
 
   // Awards
   awards: [
-    {
-      name: "Outstanding Tech Talent Award",
-      description: "BCA 3rd Year (2024–25)",
+      {
+      name: "Excellency Award",
+      description: "BCA 2nd Year ",
       year: "2024",
     },
     {
-      name: "Excellency Award",
-      description: "BCA 2nd Year (2023–24)",
-      year: "2023",
+      name: "Outstanding Tech Talent Award",
+      description: "BCA 3rd Year ",
+      year: "2025",
     },
+  
   ],
 
   // Services offered
