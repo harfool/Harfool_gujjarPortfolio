@@ -124,7 +124,7 @@ export const profile = {
         "React",
         "Node",
         "Tailwind",
-        "razorpay API",
+        "Razorpay API",
       ],
       highlights: [
         ` Frontend: responsive e-commerce UI with product listings, categories, search, reviews, image optimization and lazy
@@ -155,6 +155,11 @@ export const profile = {
       issuer: "Physics Wallah",
       year: "2024",
     },
+    {
+      name: "web development Cohort 1.0",
+      issuer: "Chai or Code",
+      year: "2025",
+    },
   ],
 
   // Awards
@@ -176,7 +181,7 @@ export const profile = {
     "Landing pages",
     "Dashboards",
     "API integrations",
-    "full stack development",
+    "Full Stack Development",
   ],
 
   // Social Links
@@ -211,7 +216,7 @@ export const navigation = [
 
 // Statistics for hero section
 export const stats = [
-  { label: "Months Experience", value: "10 + ", suffix: "" },
+  { label: "Months Experience", value: "10", suffix: "+" },
   { label: "Projects Completed", value: "5", suffix: "+" },
   { label: "Performance Boost", value: "40", suffix: "%" },
   { label: "Client Satisfaction", value: "100", suffix: "%" },

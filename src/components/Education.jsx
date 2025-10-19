@@ -170,7 +170,7 @@ const Education = () => {
                 variants={staggerChildren}
                 className="space-y-2"
               >
-                <div className="text-3xl font-bold text-accent">1</div>
+                <div className="text-3xl font-bold text-accent">2</div>
                 <div className="text-muted-foreground">Certification</div>
               </motion.div>
               

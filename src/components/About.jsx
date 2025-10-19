@@ -57,14 +57,14 @@ const About = () => {
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0"></div>
                     <span className="text-foreground text-sm sm:text-base">
-                      <strong>Experience:</strong> 10 + months in Frontend
+                      <strong>Experience:</strong> 10+ months in Frontend
                       Development
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0"></div>
                     <span className="text-foreground text-sm sm:text-base">
-                      <strong>Freelaance</strong> July 2025 - Present
+                      <strong>Freelance</strong> July 2025 - Present
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
