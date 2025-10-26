@@ -136,6 +136,25 @@ export const profile = {
       ],
       image: "/public/marwar-sahli.png",
     },
+    {
+      name: " AI  | Gen AI",
+     liveLink: "https://harfool-ai.vercel.app/",
+      subtitle:
+        "A platform showcasing AI-generated content and applications.",
+
+      stack: [
+        "MongoDB",
+        "Express",
+        "React",
+        "Node",
+        "Tailwind",
+        
+      ],
+      highlights: [
+        `Built a platform for showcasing AI-generated content and applications.`,
+      ],
+      image: "/public/image.png",
+    },
   ],
 
   // Education
