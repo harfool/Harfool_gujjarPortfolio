@@ -1,7 +1,7 @@
 import { Suspense, lazy } from 'react';
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import { profile } from '../data/profile.js';
-import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaTwitter,  } from 'react-icons/fa';
 
 // Lazy load 3D scene for performance
 const Hero3DScene = lazy(() => import('./3d/Hero3DScene.jsx'));
@@ -72,17 +72,17 @@ export default function FuturisticHero() {
     { 
       name: 'Twitter', 
       Icon: FaTwitter,
-      url: 'https://twitter.com/harfool',
+      url: 'https://x.com/harfool_gurjar0',
       color: '#60A5FA',
       hoverColor: '#93C5FD'
     },
-    { 
-      name: 'Instagram', 
-      Icon: FaInstagram,
-      url: 'https://instagram.com/harfool',
-      color: '#EC4899',
-      hoverColor: '#F472B6'
-    },
+    // { 
+    //   name: 'Instagram', 
+    //   Icon: FaInstagram,
+    //   url: 'https://instagram.com/harfool',
+    //   color: '#EC4899',
+    //   hoverColor: '#F472B6'
+    // },
   ];
 
   return (
@@ -106,10 +106,10 @@ export default function FuturisticHero() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="relative z-10 container mx-auto px-6 text-center pt-24 md:pt-32"
+        className="relative z-10 container mx-auto px-6 text-center pt-20"
       >
         {/* Greeting Badge */}
-        <motion.div variants={itemVariants} className="mb-8">
+        <motion.div variants={itemVariants} className="mb-6">
           <span className="inline-block px-6 py-2 rounded-full bg-primary/10 backdrop-blur-xl border border-primary/30 text-primary font-medium text-sm">
             <span className="inline-block animate-wave mr-2">👋</span>
             Welcome to my digital space
@@ -120,9 +120,9 @@ export default function FuturisticHero() {
         <motion.div
           style={{ x, y }}
           variants={itemVariants}
-          className="mb-6"
+          className="mb-4"
         >
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black leading-none">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-none">
             <span className="inline-block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient-x">
               {profile.name.split(' ')[0]}
             </span>
@@ -134,8 +134,8 @@ export default function FuturisticHero() {
         </motion.div>
 
         {/* Animated Tagline */}
-        <motion.div variants={itemVariants} className="mb-8">
-          <p className="text-2xl md:text-4xl font-light text-muted-foreground">
+        <motion.div variants={itemVariants} className="mb-6">
+          <p className="text-xl md:text-3xl font-light text-muted-foreground">
             <span className="text-primary font-semibold">Frontend Developer</span> ·{' '}
             <span className="text-accent font-semibold">React Specialist</span>
           </p>
@@ -144,7 +144,7 @@ export default function FuturisticHero() {
         {/* Summary with typewriter effect simulation */}
         <motion.p
           variants={itemVariants}
-          className="text-lg md:text-xl max-w-3xl mx-auto mb-12 text-muted-foreground leading-relaxed"
+          className="text-base md:text-lg max-w-3xl mx-auto mb-8 text-muted-foreground leading-relaxed"
         >
           Crafting{' '}
           <span className="text-primary font-semibold">immersive digital experiences</span> with modern web technologies.
@@ -154,13 +154,13 @@ export default function FuturisticHero() {
         {/* CTA Buttons */}
         <motion.div
           variants={itemVariants}
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
+          className="flex flex-col sm:flex-row gap-4 justify-center mb-10"
         >
           <motion.a
             href="#projects"
             whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(139, 92, 246, 0.5)' }}
             whileTap={{ scale: 0.95 }}
-            className="group relative px-8 py-4 bg-gradient-to-r from-primary to-accent text-white rounded-xl font-bold text-lg overflow-hidden"
+            className="group relative px-8 py-3 bg-gradient-to-r from-primary to-accent text-white rounded-xl font-bold text-lg overflow-hidden"
           >
             {/* Animated gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -187,7 +187,7 @@ export default function FuturisticHero() {
             href="#contact"
             whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(96, 165, 250, 0.3)' }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-background/50 backdrop-blur-xl border-2 border-accent/50 text-accent rounded-xl font-bold text-lg hover:bg-accent/10 transition-colors"
+            className="px-8 py-3 bg-background/50 backdrop-blur-xl border-2 border-accent/50 text-accent rounded-xl font-bold text-lg hover:bg-accent/10 transition-colors"
           >
             Let's Connect
           </motion.a>
@@ -196,7 +196,7 @@ export default function FuturisticHero() {
         {/* Social Icons with Glow */}
         <motion.div
           variants={itemVariants}
-          className="flex justify-center gap-6"
+          className="flex justify-center gap-6 mb-8"
         >
           {socialIcons.map((social) => (
             <motion.a
@@ -256,7 +256,7 @@ export default function FuturisticHero() {
             document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
           }}
         >
-          <motion.div
+          {/* <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
             className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
@@ -273,7 +273,7 @@ export default function FuturisticHero() {
             >
               <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
             </svg>
-          </motion.div>
+          </motion.div> */}
         </motion.a>
       </motion.div>
     </section>

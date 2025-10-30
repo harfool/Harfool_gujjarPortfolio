@@ -56,27 +56,6 @@ const Navbar = () => {
         <div className={`flex items-center justify-between transition-all duration-300 mx-auto w-[min(100%-2rem,1200px)] ${
           isScrolled ? 'glass-card-elevated px-6 py-3' : 'glass-card px-8 py-4'
         }`}>
-          {/* Logo - Hidden */}
-          <div className="hidden">
-            HG
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
-              <motion.button
-                key={item.name}
-                variants={navItem}
-                whileHover="whileHover"
-                onClick={() => scrollToSection(item.href)}
-                className={`nav-link ${
-                  activeSection === item.href.substring(1) ? 'active' : ''
-                }`}
-              >
-                {item.name}
-              </motion.button>
-            ))}
-          </div>
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
