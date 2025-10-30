@@ -2,31 +2,33 @@ import { motion } from 'framer-motion';
 import { profile } from '../data/profile.js';
 import { staggerContainer, staggerChildren, skillTag } from '../lib/variants.js';
 import SkillCard from './ui/SkillCard.jsx';
+import { FaCode, FaReact, FaServer, FaTools } from 'react-icons/fa';
+import { getTechIcon, getTechColor } from '../lib/techIcons';
 
 const SkillsGrid = () => {
   const skillCategories = [
     {
       title: "Frontend Technologies",
       skills: profile.skills.frontend,
-      icon: "🎨",
+      Icon: FaCode,
       color: "primary"
     },
     {
       title: "State & Form Management",
       skills: profile.skills.stateAndForms,
-      icon: "⚡",
+      Icon: FaReact,
       color: "accent"
     },
     {
       title: "Backend Exposure",
       skills: profile.skills.backendExposure,
-      icon: "🔧",
+      Icon: FaServer,
       color: "primary"
     },
     {
       title: "Tools & APIs",
       skills: profile.skills.toolsAndApis,
-      icon: "🛠️",
+      Icon: FaTools,
       color: "accent"
     }
   ];
@@ -60,12 +62,12 @@ const SkillsGrid = () => {
             <h3 className="text-2xl font-bold text-gradient mb-8 text-center">Core Expertise</h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
-                { skill: 'React.js', proficiency: 90, icon: '⚛️', color: 'primary' },
-                { skill: 'JavaScript (ES6+)', proficiency: 90, icon: '📜', color: 'accent' },
-                { skill: 'Tailwind CSS', proficiency: 88, icon: '🎨', color: 'primary' },
-                { skill: 'Node.js', proficiency: 80, icon: '🟢', color: 'accent' },
-                { skill: 'Redux Toolkit', proficiency: 85, icon: '🔄', color: 'primary' },
-                { skill: 'MongoDB', proficiency: 78, icon: '🍃', color: 'accent' },
+                { skill: 'React.js', proficiency: 90, color: 'primary' },
+                { skill: 'JavaScript (ES6+)', proficiency: 90, color: 'accent' },
+                { skill: 'Tailwind CSS', proficiency: 88, color: 'primary' },
+                { skill: 'Node.js', proficiency: 80, color: 'accent' },
+                { skill: 'Redux Toolkit', proficiency: 85, color: 'primary' },
+                { skill: 'MongoDB', proficiency: 78, color: 'accent' },
               ].map((skillData, index) => (
                 <SkillCard 
                   key={skillData.skill}
@@ -86,7 +88,9 @@ const SkillsGrid = () => {
               >
                 {/* Category Header */}
                 <div className="flex items-center mb-4 sm:mb-6">
-                  <span className="text-2xl sm:text-3xl mr-3 sm:mr-4">{category.icon}</span>
+                  <div className="text-2xl sm:text-3xl mr-3 sm:mr-4 text-primary/80">
+                    <category.Icon />
+                  </div>
                   <div>
                     <h3 className="text-lg sm:text-xl font-bold text-gradient mb-1">
                       {category.title}
@@ -97,27 +101,37 @@ const SkillsGrid = () => {
 
                 {/* Skills Tags */}
                 <div className="flex flex-wrap gap-2 sm:gap-3">
-                  {category.skills.map((skill, skillIndex) => (
-                    <motion.span
-                      key={skill}
-                      variants={skillTag}
-                      initial="hidden"
-                      whileInView="visible"
-                      whileHover="whileHover"
-                      viewport={{ once: true }}
-                      transition={{ 
-                        delay: categoryIndex * 0.2 + skillIndex * 0.05,
-                        duration: 0.3 
-                      }}
-                      className={`skill-tag ${
-                        category.color === 'primary' 
-                          ? 'bg-primary/10 border-primary/20 text-primary hover:bg-primary/20' 
-                          : 'bg-accent/10 border-accent/20 text-accent hover:bg-accent/20'
-                      }`}
-                    >
-                      {skill}
-                    </motion.span>
-                  ))}
+                  {category.skills.map((skill, skillIndex) => {
+                    const Icon = getTechIcon(skill);
+                    const iconColor = getTechColor(skill);
+                    return (
+                      <motion.span
+                        key={skill}
+                        variants={skillTag}
+                        initial="hidden"
+                        whileInView="visible"
+                        whileHover="whileHover"
+                        viewport={{ once: true }}
+                        transition={{ 
+                          delay: categoryIndex * 0.2 + skillIndex * 0.05,
+                          duration: 0.3 
+                        }}
+                        className={`skill-tag flex items-center gap-1.5 ${
+                          category.color === 'primary' 
+                            ? 'bg-primary/10 border-primary/20 text-primary hover:bg-primary/20' 
+                            : 'bg-accent/10 border-accent/20 text-accent hover:bg-accent/20'
+                        }`}
+                      >
+                        {Icon && (
+                          <Icon 
+                            className="text-sm flex-shrink-0" 
+                            style={{ color: iconColor }}
+                          />
+                        )}
+                        <span>{skill}</span>
+                      </motion.span>
+                    );
+                  })}
                 </div>
 
                 {/* Skill Count */}
@@ -162,15 +176,16 @@ const SkillsGrid = () => {
                   Advanced proficiency with deep understanding
                 </p>
                 <div className="space-y-2">
-                  <span className="skill-tag bg-primary/10 border-primary/20 text-primary text-xs">
-                    React.js
-                  </span>
-                  <span className="skill-tag bg-primary/10 border-primary/20 text-primary text-xs">
-                    JavaScript (ES6+)
-                  </span>
-                  <span className="skill-tag bg-primary/10 border-primary/20 text-primary text-xs">
-                    Tailwind CSS
-                  </span>
+                  {['React.js', 'JavaScript (ES6+)', 'Tailwind CSS'].map(skill => {
+                    const Icon = getTechIcon(skill);
+                    const iconColor = getTechColor(skill);
+                    return (
+                      <span key={skill} className="skill-tag bg-primary/10 border-primary/20 text-primary text-xs flex items-center justify-center gap-1.5">
+                        {Icon && <Icon style={{ color: iconColor }} />}
+                        {skill}
+                      </span>
+                    );
+                  })}
                 </div>
               </motion.div>
 
@@ -187,15 +202,16 @@ const SkillsGrid = () => {
                   Strong working knowledge and experience
                 </p>
                 <div className="space-y-2">
-                  <span className="skill-tag bg-accent/10 border-accent/20 text-accent text-xs">
-                    Redux Toolkit
-                  </span>
-                  <span className="skill-tag bg-accent/10 border-accent/20 text-accent text-xs">
-                    Node.js
-                  </span>
-                  <span className="skill-tag bg-accent/10 border-accent/20 text-accent text-xs">
-                     MongoDB
-                  </span>
+                  {['Redux Toolkit', 'Node.js', 'MongoDB'].map(skill => {
+                    const Icon = getTechIcon(skill);
+                    const iconColor = getTechColor(skill);
+                    return (
+                      <span key={skill} className="skill-tag bg-accent/10 border-accent/20 text-accent text-xs flex items-center justify-center gap-1.5">
+                        {Icon && <Icon style={{ color: iconColor }} />}
+                        {skill}
+                      </span>
+                    );
+                  })}
                 </div>
               </motion.div>
 
@@ -212,15 +228,16 @@ const SkillsGrid = () => {
                   Actively learning and gaining experience
                 </p>
                 <div className="space-y-2">
-                  <span className="skill-tag bg-muted/10 border-muted/20 text-muted-foreground text-xs">
-                    Docker
-                  </span>
-                  <span className="skill-tag bg-muted/10 border-muted/20 text-muted-foreground text-xs">
-                    PostgreSQL
-                  </span>
-                  <span className="skill-tag bg-muted/10 border-muted/20 text-muted-foreground text-xs">
-                    Prisma ORM
-                  </span>
+                  {['Docker', 'PostgreSQL', 'Prisma ORM'].map(skill => {
+                    const Icon = getTechIcon(skill);
+                    const iconColor = getTechColor(skill);
+                    return (
+                      <span key={skill} className="skill-tag bg-muted/10 border-muted/20 text-muted-foreground text-xs flex items-center justify-center gap-1.5">
+                        {Icon && <Icon style={{ color: iconColor }} />}
+                        {skill}
+                      </span>
+                    );
+                  })}
                 </div>
               </motion.div>
             </div>

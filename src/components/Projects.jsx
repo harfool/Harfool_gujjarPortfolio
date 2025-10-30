@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { profile } from '../data/profile.js';
 import { staggerContainer, staggerChildren, projectCard } from '../lib/variants.js';
 import ProjectModal from './ui/ProjectModal.jsx';
+import { getTechIcon, getTechColor } from '../lib/techIcons';
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -142,22 +143,27 @@ const Projects = () => {
                   <div>
                     <h4 className="font-semibold text-foreground mb-3">Tech Stack:</h4>
                     <div className="flex flex-wrap gap-2">
-                      {project.stack.map((tech, techIndex) => (
-                        <motion.span
-                          key={tech}
-                          initial={{ opacity: 0, scale: 0.8 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: techIndex * 0.05, duration: 0.2 }}
-                          viewport={{ once: true }}
-                          className={`skill-tag text-xs ${
-                            ['React', 'Node', 'Express', 'MongoDB'].includes(tech)
-                              ? 'bg-primary/10 border-primary/20 text-primary'
-                              : 'bg-accent/10 border-accent/20 text-accent'
-                          }`}
-                        >
-                          {tech}
-                        </motion.span>
-                      ))}
+                      {project.stack.map((tech, techIndex) => {
+                        const Icon = getTechIcon(tech);
+                        const iconColor = getTechColor(tech);
+                        return (
+                          <motion.span
+                            key={tech}
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: techIndex * 0.05, duration: 0.2 }}
+                            viewport={{ once: true }}
+                            className={`skill-tag text-xs flex items-center gap-1.5 ${
+                              ['React', 'Node', 'Express', 'MongoDB'].includes(tech)
+                                ? 'bg-primary/10 border-primary/20 text-primary'
+                                : 'bg-accent/10 border-accent/20 text-accent'
+                            }`}
+                          >
+                            {Icon && <Icon className="text-sm" style={{ color: iconColor }} />}
+                            {tech}
+                          </motion.span>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
