@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { profile } from '../data/profile.js';
 import { staggerContainer, staggerChildren, skillTag } from '../lib/variants.js';
+import SkillCard from './ui/SkillCard.jsx';
 
 const SkillsGrid = () => {
   const skillCategories = [
@@ -49,6 +50,30 @@ const SkillsGrid = () => {
             <p className="section-subtitle">
               The tools and technologies I use to bring ideas to life
             </p>
+          </motion.div>
+
+          {/* Featured Skills with Progress Bars */}
+          <motion.div
+            variants={staggerChildren}
+            className="mb-16"
+          >
+            <h3 className="text-2xl font-bold text-gradient mb-8 text-center">Core Expertise</h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                { skill: 'React.js', proficiency: 90, icon: '⚛️', color: 'primary' },
+                { skill: 'JavaScript (ES6+)', proficiency: 90, icon: '📜', color: 'accent' },
+                { skill: 'Tailwind CSS', proficiency: 88, icon: '🎨', color: 'primary' },
+                { skill: 'Node.js', proficiency: 80, icon: '🟢', color: 'accent' },
+                { skill: 'Redux Toolkit', proficiency: 85, icon: '🔄', color: 'primary' },
+                { skill: 'MongoDB', proficiency: 78, icon: '🍃', color: 'accent' },
+              ].map((skillData, index) => (
+                <SkillCard 
+                  key={skillData.skill}
+                  {...skillData}
+                  index={index}
+                />
+              ))}
+            </div>
           </motion.div>
 
           {/* Skills Grid */}

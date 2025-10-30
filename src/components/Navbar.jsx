@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { profile, navigation } from '../data/profile.js';
 import { navItem } from '../lib/variants.js';
+import ThemeToggle from './ui/ThemeToggle.jsx';
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('hero');
@@ -79,6 +80,7 @@ const Navbar = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
+            <ThemeToggle />
             <motion.a
               href={profile.contact.resume}
               download

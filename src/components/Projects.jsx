@@ -1,8 +1,23 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import { profile } from '../data/profile.js';
 import { staggerContainer, staggerChildren, projectCard } from '../lib/variants.js';
+import ProjectModal from './ui/ProjectModal.jsx';
 
 const Projects = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openProjectModal = (project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setTimeout(() => setSelectedProject(null), 300);
+  };
+
   return (
     <section id="projects" className="py-24 relative">
       <div className="container mx-auto px-6">
@@ -31,7 +46,8 @@ const Projects = () => {
                 key={project.name}
                 variants={projectCard}
                 whileHover="whileHover"
-                className="project-card group"
+                onClick={() => openProjectModal(project)}
+                className="project-card group cursor-pointer"
               >
                 {/* Project Image */}
                 <div className="relative mb-6 overflow-hidden rounded-xl">
@@ -192,6 +208,13 @@ const Projects = () => {
           </motion.div>
         </motion.div>
       </div>
+
+      {/* Project Modal */}
+      <ProjectModal 
+        project={selectedProject}
+        isOpen={isModalOpen}
+        onClose={closeModal}
+      />
     </section>
   );
 };
