@@ -1,6 +1,7 @@
 import { useEffect, Suspense, lazy } from 'react';
 import { motion } from 'framer-motion';
 import { profile } from '../data/profile.js';
+import AnimatedBackground from '../components/AnimatedBackground.jsx';
 
 // Lazy load components for performance
 const FloatingNavbar = lazy(() => import('../components/FloatingNavbar.jsx'));
@@ -78,7 +79,10 @@ export default function FuturisticIndex() {
 
   return (
     <Suspense fallback={<LoadingFallback />}>
-      <div className="relative min-h-screen bg-background text-foreground overflow-x-hidden">
+      <div className="relative min-h-screen text-foreground overflow-x-hidden">
+        {/* Optimized Animated Background - Applies to entire website */}
+        <AnimatedBackground />
+        
         {/* Floating Navbar */}
         <FloatingNavbar />
 
@@ -164,65 +168,6 @@ export default function FuturisticIndex() {
             <Footer />
           </Suspense>
         </main>
-
-        {/* Animated Background Gradient Mesh */}
-        <div className="fixed inset-0 -z-50 overflow-hidden pointer-events-none">
-          <motion.div
-            animate={{
-              background: [
-                'radial-gradient(ellipse 80% 80% at 20% 30%, rgba(139, 92, 246, 0.15), transparent)',
-                'radial-gradient(ellipse 80% 80% at 80% 70%, rgba(96, 165, 250, 0.15), transparent)',
-                'radial-gradient(ellipse 80% 80% at 20% 30%, rgba(139, 92, 246, 0.15), transparent)',
-              ],
-            }}
-            transition={{
-              duration: 10,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-            className="absolute inset-0"
-          />
-          <motion.div
-            animate={{
-              background: [
-                'radial-gradient(ellipse 80% 80% at 80% 20%, rgba(236, 72, 153, 0.1), transparent)',
-                'radial-gradient(ellipse 80% 80% at 20% 80%, rgba(245, 158, 11, 0.1), transparent)',
-                'radial-gradient(ellipse 80% 80% at 80% 20%, rgba(236, 72, 153, 0.1), transparent)',
-              ],
-            }}
-            transition={{
-              duration: 15,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-            className="absolute inset-0"
-          />
-        </div>
-
-        {/* Floating Particles (CSS-based for performance) */}
-        <div className="fixed inset-0 -z-40 overflow-hidden pointer-events-none">
-          {[...Array(20)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-1 h-1 bg-primary/30 rounded-full"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                y: [0, -30, 0],
-                opacity: [0.3, 0.8, 0.3],
-                scale: [1, 1.5, 1],
-              }}
-              transition={{
-                duration: 3 + Math.random() * 2,
-                repeat: Infinity,
-                delay: Math.random() * 2,
-                ease: 'easeInOut',
-              }}
-            />
-          ))}
-        </div>
       </div>
     </Suspense>
   );

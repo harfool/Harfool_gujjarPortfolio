@@ -231,9 +231,6 @@ export default function SkillVisualizer3D({ skills }) {
 
   return (
     <section id="skills" className="py-20 relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background -z-10" />
-
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <motion.div

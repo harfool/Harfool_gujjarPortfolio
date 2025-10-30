@@ -111,6 +111,14 @@
     scroll-behavior: smooth;
   }
   
+  /* Performance Optimizations */
+  * {
+    /* Enable GPU acceleration for animations */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  
   /* Scrollbar Styling */
   ::-webkit-scrollbar {
     width: 6px;
