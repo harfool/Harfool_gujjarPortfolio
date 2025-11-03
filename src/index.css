@@ -68,33 +68,6 @@
       hsla(240, 5%, 25%, 0.6) 0%, 
       hsla(240, 5%, 15%, 0.2) 100%);
   }
-
-  /* Light Theme */
-  .light {
-    --background: 0 0% 98%;
-    --foreground: 240 10% 10%;
-    --surface: 0 0% 95%;
-    --surface-elevated: 0 0% 97%;
-    
-    --glass: 0 0% 100%;
-    --glass-border: 240 5% 90%;
-    --glass-elevated: 0 0% 98%;
-    
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 10%;
-    --card-elevated: 0 0% 98%;
-    
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 10%;
-    
-    --muted: 240 5% 90%;
-    --muted-foreground: 240 5% 40%;
-    
-    --border: 240 5% 90%;
-    --input: 240 5% 90%;
-    
-    --glass-shadow: 0 8px 32px hsla(240, 5%, 20%, 0.15);
-  }
 }
 
 @layer base {
@@ -109,14 +82,6 @@
   
   html {
     scroll-behavior: smooth;
-  }
-  
-  /* Performance Optimizations */
-  * {
-    /* Enable GPU acceleration for animations */
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    perspective: 1000px;
   }
   
   /* Scrollbar Styling */
@@ -284,34 +249,6 @@
   to { opacity: 1; }
 }
 
-@keyframes gradient-x {
-  0%, 100% {
-    background-size: 200% 200%;
-    background-position: 0% 50%;
-  }
-  50% {
-    background-size: 200% 200%;
-    background-position: 100% 50%;
-  }
-}
-
-@keyframes wave {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(20deg); }
-  75% { transform: rotate(-20deg); }
-}
-
-.animate-gradient-x {
-  animation: gradient-x 8s ease infinite;
-  background-size: 200% 200%;
-}
-
-.animate-wave {
-  animation: wave 2s ease-in-out infinite;
-  display: inline-block;
-  transform-origin: 70% 70%;
-}
-
 /* Reduce motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -326,9 +263,7 @@
   .animate-float,
   .animate-glow,
   .animate-slide-up,
-  .animate-fade-in,
-  .animate-gradient-x,
-  .animate-wave {
+  .animate-fade-in {
     animation: none !important;
   }
 }
